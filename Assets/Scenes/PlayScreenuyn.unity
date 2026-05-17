@@ -348,8 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 156980886}
 --- !u!61 &25203432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -716,6 +715,9 @@ MonoBehaviour:
   inventoryPanel: {fileID: 2094727080}
   slotPrefab: {fileID: 285008149007451216, guid: 9ab9d65d952b5dd43b0cf3d3093ed32b, type: 3}
   slotCount: 21
+  itemPrefabs:
+  - {fileID: 3977906108433757469, guid: e3711a29133b33c4cbd36188147f38d2, type: 3}
+  - {fileID: 4851707211279618324, guid: 57430b896cfd2464a8c59a01d6daf8f7, type: 3}
 --- !u!4 &163144076
 Transform:
   m_ObjectHideFlags: 0
@@ -900,8 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1049253181}
 --- !u!61 &288678607
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1622,8 +1623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 916686662}
 --- !u!61 &356881840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2147,10 +2147,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.55635494
+    x: 0
     y: 0
-    width: 0.790834
-    height: 0.7910448
+    width: 0.9995078
+    height: 0.99950784
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2784,8 +2784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1988706205}
 --- !u!61 &556202113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4304,8 +4303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1625586285}
 --- !u!61 &724319732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9095,8 +9093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1701655575}
 --- !u!61 &1040002944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20494,8 +20491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1397089679}
 --- !u!61 &1123334096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206941,8 +206937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1609588384}
 --- !u!61 &1164253310
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -321511,8 +321506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 50966355}
 --- !u!61 &1355238574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -351557,8 +351551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1518985613}
 --- !u!61 &1687563032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -352540,8 +352533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1453034647}
 --- !u!61 &1790343186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -356777,8 +356769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 572909302}
 --- !u!61 &1902932284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -358159,8 +358150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be55c3fec26e7ff44890331fe55b040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalTeleport
-  direction: 0
-  teleportTargetPosition: {fileID: 0}
+  destination: {fileID: 1841945489}
 --- !u!61 &1980218490
 BoxCollider2D:
   m_ObjectHideFlags: 0
