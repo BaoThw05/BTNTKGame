@@ -1,21 +1,52 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using Unity.Cinemachine;
+using UnityEngine;
 
 public class LocalTeleport : MonoBehaviour
 {
-    [Header("Điểm Đến")]
-    [Tooltip("Kéo thả GameObject bạn muốn nhân vật bay tới (ví dụ: RemoveHome) vào đây")]
-    public Transform destination;
+    public enum Direction { Up, Down, Left, Right, Teleport }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    CinemachineConfiner confider;
+
+    private void Awake()
     {
-        // Dòng này sẽ in ra tên của bất kỳ vật gì chạm vào cửa
-        Debug.Log("Có vật chạm vào cửa: " + other.gameObject.name + " | Tag của nó là: " + other.tag);
+        confider = FindFirstObjectByType<CinemachineConfiner>();
+    }
 
-        if (other.CompareTag("Player"))
+    [Header("Cấu hình di chuyển")]
+    public Direction direction;
+
+    [Header("Điểm Đến")]
+    [Tooltip("Kéo thả GameObject bạn muốn nhân vật bay tới vào đây")]
+    public Transform teleportTargetPosition;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            if (destination != null)
+            // Chỉ gọi duy nhất hàm chuỗi bất đồng bộ này
+            FadeTrans(collision.gameObject);
+        }
+    }
+
+    async void FadeTrans(GameObject targetPlayer)
+    {
+        // 1. Chờ màn hình FADE OUT (Tối đen hoàn toàn)
+        await screenFade.instance.FadeOut();
+        UpdatePlayerPosition(targetPlayer);
+        await Task.Delay(1500);
+
+        await screenFade.instance.FadeIn();
+    }
+
+    private void UpdatePlayerPosition(GameObject targetPlayer)
+    {
+        if (direction == Direction.Teleport)
+        {
+            if (teleportTargetPosition != null && targetPlayer != null)
             {
-                other.transform.position = destination.position;
+                targetPlayer.transform.position = teleportTargetPosition.position;
+                Debug.Log("Dịch chuyển thành công tới: " + teleportTargetPosition.name);
             }
         }
     }

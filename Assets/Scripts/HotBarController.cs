@@ -40,6 +40,45 @@ public class HotBarController : MonoBehaviour
             }
         }
     }
+    public bool AddItem(GameObject itemPrefab)
+    {
+        foreach (Transform slotTransform in hotBarPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot != null && slot.currentItem == null)
+            {
+                // Instantiate item vào slot, false để giữ local transform ổn định
+                GameObject item = Instantiate(itemPrefab, slotTransform, false);
+                RectTransform rt = item.GetComponent<RectTransform>();
+                if (rt != null)
+                {
+                    // Reset vị trí về giữa slot
+                    rt.anchorMin = new Vector2(0.5f, 0.5f);
+                    rt.anchorMax = new Vector2(0.5f, 0.5f);
+                    rt.pivot = new Vector2(0.5f, 0.5f);
+                    rt.anchoredPosition = Vector2.zero;
+
+                    // Giữ nguyên scale gốc
+                    rt.localScale = Vector3.one;
+
+                    // FIX kích thước cố định để không bị phóng to
+                    rt.sizeDelta = new Vector2(40, 40);
+                }
+
+                // Nếu item có Image thì giữ đúng tỉ lệ ảnh
+                UnityEngine.UI.Image img = item.GetComponent<UnityEngine.UI.Image>();
+                if (img != null)
+                {
+                    img.preserveAspect = true;
+                }
+
+                slot.currentItem = item;
+                return true;
+            }
+        }
+
+        return false;
+    }
     public List<InventorySaveData> GetHotBarItem()
     {
         List<InventorySaveData> hotBarData = new List<InventorySaveData>();
@@ -47,9 +86,11 @@ public class HotBarController : MonoBehaviour
         foreach (Transform slotTransform in hotBarPanel.transform)
         {
             Slot slot = slotTransform.GetComponent<Slot>();
+
             if (slot != null && slot.currentItem != null)
             {
                 Item item = slot.currentItem.GetComponent<Item>();
+
                 if (item != null)
                 {
                     hotBarData.Add(new InventorySaveData
@@ -60,33 +101,58 @@ public class HotBarController : MonoBehaviour
                 }
             }
         }
+
         return hotBarData;
     }
+
     public void SetHotBarItem(List<InventorySaveData> hotBarData)
     {
+        // Xóa toàn bộ slot cũ
         foreach (Transform child in hotBarPanel.transform)
         {
             Destroy(child.gameObject);
         }
+
+        // Tạo lại slot mới
         for (int i = 0; i < slotCount; i++)
         {
             Instantiate(slotPrefab, hotBarPanel.transform);
         }
+
+        // Load item vào đúng slot và GIỮ NGUYÊN KÍCH CỠ
         foreach (InventorySaveData data in hotBarData)
         {
             if (data.slotIndex < slotCount)
             {
-                Slot slot = hotBarPanel.transform.GetChild(data.slotIndex).GetComponent<Slot>();
+                Slot slot = hotBarPanel.transform
+                    .GetChild(data.slotIndex)
+                    .GetComponent<Slot>();
+
                 GameObject itemPrefab = itemDictionary.GetItemPrefabByID(data.itemIDs);
+
                 if (itemPrefab != null)
                 {
+                    // false để giữ nguyên RectTransform prefab
                     GameObject item = Instantiate(itemPrefab, slot.transform, false);
+
                     RectTransform rt = item.GetComponent<RectTransform>();
-                    rt.anchorMin = new Vector2(0, 0);
-                    rt.anchorMax = new Vector2(1, 1);
-                    rt.offsetMin = Vector2.zero;
-                    rt.offsetMax = Vector2.zero;
-                    rt.localScale = Vector3.one;
+
+                    if (rt != null)
+                    {
+                        // Giữ nguyên size prefab khi load/drop
+                        rt.localScale = Vector3.one;
+                        rt.localPosition = Vector3.zero;
+                        rt.anchoredPosition = Vector2.zero;
+
+                        // KHÔNG stretch full slot nữa
+                        rt.anchorMin = new Vector2(0.5f, 0.5f);
+                        rt.anchorMax = new Vector2(0.5f, 0.5f);
+                        rt.pivot = new Vector2(0.5f, 0.5f);
+
+                        // giữ nguyên width/height gốc của prefab
+                        rt.sizeDelta = itemPrefab.GetComponent<RectTransform>().sizeDelta;
+                    }
+
                     slot.currentItem = item;
                 }
             }

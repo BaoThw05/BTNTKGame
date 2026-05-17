@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -6,7 +6,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
    Transform originalParent;
     CanvasGroup canvasGroup;
-    public float minDropDistance = 0.3f;
+    public float minDropDistance = 0.4f;
     public float maxDropDistance = 0.5f;
     void Start()
     {
@@ -76,6 +76,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         RectTransform inventoryRect = originalParent.parent.GetComponent<RectTransform>();
         return RectTransformUtility.RectangleContainsScreenPoint(inventoryRect, mousePosition);
     }
+    public Transform worldCanvasTransform;
+
     void DropItem(Slot originalSlot)
     {
         originalSlot.currentItem = null;
@@ -85,9 +87,16 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             Debug.LogError("Player object not found in the scene.");
             return;
         }
-        Vector2 dropOffset= Random.insideUnitCircle * Random.Range(minDropDistance, maxDropDistance);
+
+        Vector2 dropOffset = Random.insideUnitCircle * Random.Range(minDropDistance, maxDropDistance);
         Vector2 dropPosition = (Vector2)playerTransform.position + dropOffset;
-        GameObject dropItem= Instantiate(gameObject, dropPosition, Quaternion.identity);
+
+        // Sinh ra và đặt ngay vào World Canvas, giữ nguyên thông số RectTransform ban đầu
+        GameObject dropItem = Instantiate(gameObject, dropPosition, Quaternion.identity, worldCanvasTransform);
+
+        // Đảm bảo tỷ lệ local không bị méo
+        dropItem.transform.localScale = Vector3.one;
+
         dropItem.GetComponent<BounceEffect>().StartBounce();
         Destroy(gameObject);
     }

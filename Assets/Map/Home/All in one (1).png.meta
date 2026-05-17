@@ -1,0 +1,982 @@
+fileFormatVersion: 2
+guid: 5c462a481c2fb6b42a5efd972550fb23
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3673274880793349982
+    second: All in one (1)_0
+  - first:
+      213: -7711490563940766448
+    second: All in one (1)_1
+  - first:
+      213: 5573554436167574052
+    second: All in one (1)_2
+  - first:
+      213: -2879284005931775412
+    second: All in one (1)_3
+  - first:
+      213: -8116853318608071247
+    second: All in one (1)_4
+  - first:
+      213: 2232474609015864168
+    second: All in one (1)_5
+  - first:
+      213: -6063812196004511294
+    second: All in one (1)_6
+  - first:
+      213: -5694926506987648267
+    second: All in one (1)_7
+  - first:
+      213: 3746569490284860455
+    second: All in one (1)_8
+  - first:
+      213: -1651884114903083881
+    second: All in one (1)_9
+  - first:
+      213: -7788319267462077681
+    second: All in one (1)_10
+  - first:
+      213: 2281815561165018492
+    second: All in one (1)_11
+  - first:
+      213: 7887468449295045869
+    second: All in one (1)_12
+  - first:
+      213: -6746240245146952601
+    second: All in one (1)_13
+  - first:
+      213: -1006592855977217952
+    second: All in one (1)_14
+  - first:
+      213: 6429182768828993952
+    second: All in one (1)_15
+  - first:
+      213: 6605036340715443050
+    second: All in one (1)_16
+  - first:
+      213: -2702031361373509631
+    second: All in one (1)_17
+  - first:
+      213: -4782134543435389340
+    second: All in one (1)_18
+  - first:
+      213: -2164076600899540397
+    second: All in one (1)_19
+  - first:
+      213: 940645266124582398
+    second: All in one (1)_20
+  - first:
+      213: -2723800537171468637
+    second: All in one (1)_21
+  - first:
+      213: 5175847110986456926
+    second: All in one (1)_22
+  - first:
+      213: 3519964854623537648
+    second: All in one (1)_23
+  - first:
+      213: -5167896591790000669
+    second: All in one (1)_24
+  - first:
+      213: -4252539641009229675
+    second: All in one (1)_25
+  - first:
+      213: 6860385203029343875
+    second: All in one (1)_26
+  - first:
+      213: 6563118947572108170
+    second: All in one (1)_27
+  - first:
+      213: -4409434904385669373
+    second: All in one (1)_28
+  - first:
+      213: 2477608371101483218
+    second: All in one (1)_29
+  - first:
+      213: -3650418039157029237
+    second: All in one (1)_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: All in one (1)_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 336
+        width: 102
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a072ff25f7e50dc0800000000000000
+      internalID: -3673274880793349982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 336
+        width: 165
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01da88770384bf490800000000000000
+      internalID: -7711490563940766448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 288
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4222210da3e395d40800000000000000
+      internalID: 5573554436167574052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_3
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 334
+        width: 106
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a09f2a37aba08d0800000000000000
+      internalID: -2879284005931775412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_4
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 336
+        width: 174
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b55a6269e42b5f80800000000000000
+      internalID: -8116853318608071247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 335
+        width: 247
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b387824d75bfe10800000000000000
+      internalID: 2232474609015864168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_6
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 288
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c148786fe209dba0800000000000000
+      internalID: -6063812196004511294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 288
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa8b01d38e87f0b0800000000000000
+      internalID: -5694926506987648267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_8
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 287
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724debae91d7ef330800000000000000
+      internalID: 3746569490284860455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_9
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 287
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794571946245319e0800000000000000
+      internalID: -1651884114903083881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_10
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 288
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03a799f3e45ae390800000000000000
+      internalID: -7788319267462077681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75133ec923aaaf10800000000000000
+      internalID: 2281815561165018492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_12
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 110
+        width: 362
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de41559d3cae57d60800000000000000
+      internalID: 7887468449295045869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_13
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 128
+        width: 104
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c529a7d3a8062a0800000000000000
+      internalID: -6746240245146952601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_14
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 256
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0603802712dd702f0800000000000000
+      internalID: -1006592855977217952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 265
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a15d1c3aab093950800000000000000
+      internalID: 6429182768828993952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_16
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 240
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63d3e09e8dc9ab50800000000000000
+      internalID: 6605036340715443050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_17
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 240
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108ed55fac4708ad0800000000000000
+      internalID: -2702031361373509631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 240
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466a86638f172adb0800000000000000
+      internalID: -4782134543435389340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 240
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ae5a81cc7a7f1e0800000000000000
+      internalID: -2164076600899540397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_20
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 240
+        width: 51
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd2203c2e7dd0d00800000000000000
+      internalID: 940645266124582398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_21
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 240
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae50eeb7dd133ad0800000000000000
+      internalID: -2723800537171468637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_22
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 233
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f541e468d44d740800000000000000
+      internalID: 5175847110986456926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_23
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 240
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f902bdb26d69d030800000000000000
+      internalID: 3519964854623537648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_24
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 64
+        width: 31
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5b7623e61f748b0800000000000000
+      internalID: -5167896591790000669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_25
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 165
+        width: 98
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590b0683ab1fbf4c0800000000000000
+      internalID: -4252539641009229675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_26
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 166
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ef8e88efbf43f50800000000000000
+      internalID: 6860385203029343875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_27
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 166
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8bcba0f8e1e41b50800000000000000
+      internalID: 6563118947572108170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_28
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 166
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30732ef015a8ec2c0800000000000000
+      internalID: -4409434904385669373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_29
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 167
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0c904cfab326220800000000000000
+      internalID: 2477608371101483218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_30
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 76
+        width: 102
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b860e56522c175dc0800000000000000
+      internalID: -3650418039157029237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 287
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbe5d4ab13fd704cb0d58d4da165f3c
+      internalID: 1888018074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All in one (1)_32
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 287
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e308b8cbcfd1e740b836a178c7556d9
+      internalID: 1578130996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1b42fcee7f234e6448702b08372b78aa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      All in one (1)_0: -3673274880793349982
+      All in one (1)_1: -7711490563940766448
+      All in one (1)_10: -7788319267462077681
+      All in one (1)_11: 2281815561165018492
+      All in one (1)_12: 7887468449295045869
+      All in one (1)_13: -6746240245146952601
+      All in one (1)_14: -1006592855977217952
+      All in one (1)_15: 6429182768828993952
+      All in one (1)_16: 6605036340715443050
+      All in one (1)_17: -2702031361373509631
+      All in one (1)_18: -4782134543435389340
+      All in one (1)_19: -2164076600899540397
+      All in one (1)_2: 5573554436167574052
+      All in one (1)_20: 940645266124582398
+      All in one (1)_21: -2723800537171468637
+      All in one (1)_22: 5175847110986456926
+      All in one (1)_23: 3519964854623537648
+      All in one (1)_24: -5167896591790000669
+      All in one (1)_25: -4252539641009229675
+      All in one (1)_26: 6860385203029343875
+      All in one (1)_27: 6563118947572108170
+      All in one (1)_28: -4409434904385669373
+      All in one (1)_29: 2477608371101483218
+      All in one (1)_3: -2879284005931775412
+      All in one (1)_30: -3650418039157029237
+      All in one (1)_31: 1888018074
+      All in one (1)_32: 1578130996
+      All in one (1)_4: -8116853318608071247
+      All in one (1)_5: 2232474609015864168
+      All in one (1)_6: -6063812196004511294
+      All in one (1)_7: -5694926506987648267
+      All in one (1)_8: 3746569490284860455
+      All in one (1)_9: -1651884114903083881
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
