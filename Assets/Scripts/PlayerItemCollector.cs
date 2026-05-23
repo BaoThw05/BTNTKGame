@@ -47,9 +47,10 @@ public class PlayerItemCollector : MonoBehaviour
                     // Nếu thêm vào hotbar thành công, thì không cần thêm vào inventory nữa
                     // Tắt va chạm của bản gốc dưới đất để lúc chờ animation không bị lụm đúp
                     collision.enabled = false;
-
+                    SoundManager.Instance.PlaySound("PickUp",transform.position);
                     if (animator != null)
                     {
+                        
                         animator.SetTrigger("PickTrigger");
                         await Task.Delay(400);
                     }
@@ -68,11 +69,13 @@ public class PlayerItemCollector : MonoBehaviour
                     // BƯỚC 2: Nếu đưa vào túi thành công, LÚC NÀY mới tắt va chạm của bản gốc dưới đất
                     if (added)
                     {
+                        SoundManager.Instance.PlaySound("PickUp", transform.position);
                         // Tắt va chạm của bản gốc dưới đất để lúc chờ animation không bị lụm đúp
                         collision.enabled = false;
 
                         if (animator != null)
                         {
+                            
                             animator.SetTrigger("PickTrigger");
                             await Task.Delay(400);
                         }

@@ -12,7 +12,6 @@ public class screenFade : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Giữ màn hình fade không bị mất khi đổi scene
         }
         else
         {

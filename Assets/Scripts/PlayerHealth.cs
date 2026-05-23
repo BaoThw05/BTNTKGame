@@ -1,29 +1,26 @@
 ﻿using UnityEngine;
+
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth;
-    private int currentHealth;
+    public int currentHealth;  // 👈 ĐỔI TỪ private thành public (hoặc [SerializeField] private)
 
-    public HealthBar health;// Sự kiện khi nhân vật chết
+    public HealthBar health;
     private Animator animator;
 
     void Start()
     {
         currentHealth = maxHealth;
 
-        // 1. Tìm đích danh object có tên là "RedBar" trên Scene
         if (health == null)
         {
             GameObject redBarObject = GameObject.Find("RedBar");
-
-            // Nếu tìm thấy Object tên RedBar, thì lấy script HealthBar của nó
             if (redBarObject != null)
             {
                 health = redBarObject.GetComponent<HealthBar>();
             }
         }
 
-        // 2. Cập nhật thanh máu sau khi tìm được
         if (health != null)
         {
             health.UpdateBar(currentHealth, maxHealth);
@@ -33,31 +30,76 @@ public class PlayerHealth : MonoBehaviour
             Debug.LogError("Không tìm thấy Object nào tên 'RedBar' có gắn script HealthBar!");
         }
 
-        // 3. Tìm Animator
         animator = GetComponentInChildren<Animator>();
     }
-    void TakeDamage(int damage)
+
+    // 👉 ĐỔI TỪ void thành public void
+    public void TakeDamage(int damage)
     {
+        if (currentHealth <= 0) return;
+
         currentHealth -= damage;
-        health.UpdateBar(currentHealth, maxHealth);
+
+        if (health != null)
+        {
+            health.UpdateBar(currentHealth, maxHealth);
+        }
+
+        if (animator != null)
+        {
+            animator.SetTrigger("HitTrigger");
+        }
+
+        Debug.Log("Nhận sát thương: " + damage + ", Máu còn: " + currentHealth);
 
         if (currentHealth <= 0)
         {
             Die();
         }
     }
-    private void Die()
+
+    public void Heal(int amount)
     {
-        animator.SetTrigger("DieTrigger"); // gọi animation chết
+        if (currentHealth <= 0) return;
 
-        // Ví dụ: khóa điều khiển
-        GetComponent<PlayerMove>().enabled = false;
+        currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
 
-        // Optional: tắt collider
-        GetComponent<Collider2D>().enabled = false;
+        if (health != null)
+        {
+            health.UpdateBar(currentHealth, maxHealth);
+        }
+
+        Debug.Log("Hồi máu: +" + amount + ", Máu hiện tại: " + currentHealth);
     }
 
-    void Update()
+    private void Die()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("DieTrigger");
+        }
+
+        PlayerMove playerMove = GetComponent<PlayerMove>();
+        if (playerMove != null)
+        {
+            playerMove.enabled = false;
+        }
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.enabled = false;
+        }
+
+        Debug.Log("Player đã chết!");
+    }
+
+    //Bạn có thể xóa hoặc comment đoạn Update test này
+     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {

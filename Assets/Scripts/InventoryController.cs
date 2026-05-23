@@ -1,33 +1,60 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class InventoryController : MonoBehaviour
 {
     private ItemDictionary itemDictionary;
+    public GameObject inventory;
+    public GameObject panel;
+    public GameObject bag;
     public GameObject inventoryPanel;
     public GameObject slotPrefab;
     public int slotCount;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject[] itemPrefabs;
+    
+
     void Start()
     {
-        itemDictionary = FindObjectOfType<ItemDictionary>();
-        //for (int i = 0; i < slotCount; i++)
-        //{
-        //    Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
-        //    if(i < itemPrefabs.Length)
-        //    {
-        //        GameObject item = Instantiate(itemPrefabs[i],slot.transform);
-        //        item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        //        slot.currentItem=item;
-        //    }
-        //}
+
+        for (int i = 0; i < slotCount; i++)
+        {
+            Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
+            if (i < itemPrefabs.Length)
+            {
+                GameObject item = Instantiate(itemPrefabs[i], slot.transform);
+                item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                slot.currentItem = item;
+            }
+        }
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SoundManager.Instance.PlaySound("Bag", transform.position);
+            ToggleInventory();
+        }
+    }
+    public void ToggleInventory()
+    {
+        if (inventory != null)
+        {
+            bool isBagActive = !bag.activeSelf;
+            bool isActive = !inventory.activeSelf;
+            bool isPanelActive = !panel.activeSelf;
+            inventory.SetActive(isActive);
+            panel.SetActive(isPanelActive);
+            bag.SetActive(isBagActive);
+        }
+    }
+
     public bool AddItem(GameObject itemPrefab)
     {
-        foreach(Transform slotTransform in inventoryPanel.transform)
+        foreach (Transform slotTransform in inventoryPanel.transform)
         {
             Slot slot = slotTransform.GetComponent<Slot>();
-            if(slot != null && slot.currentItem == null)
+            if (slot != null && slot.currentItem == null)
             {
                 GameObject item = Instantiate(itemPrefab, slotTransform);
                 item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
@@ -38,6 +65,7 @@ public class InventoryController : MonoBehaviour
         Debug.Log("Inventory is full!");
         return false;
     }
+
     public List<InventorySaveData> GetInventoryItem()
     {
         List<InventorySaveData> inventoryData = new List<InventorySaveData>();
@@ -46,12 +74,10 @@ public class InventoryController : MonoBehaviour
         {
             Slot slot = slotTransform.GetComponent<Slot>();
 
-            // Kiểm tra chắc chắn slot có tồn tại và đang chứa item
             if (slot != null && slot.currentItem != null)
             {
                 Item item = slot.currentItem.GetComponent<Item>();
 
-                // Kiểm tra chắc chắn object đó có script Item
                 if (item != null)
                 {
                     inventoryData.Add(new InventorySaveData
@@ -65,6 +91,7 @@ public class InventoryController : MonoBehaviour
 
         return inventoryData;
     }
+
     public void SetInventoryItem(List<InventorySaveData> inventoryData)
     {
         foreach (Transform child in inventoryPanel.transform)

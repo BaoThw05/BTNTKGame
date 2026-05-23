@@ -17,6 +17,9 @@ GameObject:
   - component: {fileID: 7375577227309883457}
   - component: {fileID: 5554371880483053748}
   - component: {fileID: 5681408928166260257}
+  - component: {fileID: 8351521248403830018}
+  - component: {fileID: 4552122279277896976}
+  - component: {fileID: 1048864569279028671}
   m_Layer: 5
   m_Name: meat
   m_TagString: Item
@@ -114,7 +117,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4851707211279618324}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
@@ -128,7 +131,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4851707211279618324}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -203,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1277896721
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 15
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9077199038371864319, guid: e6e30a72e81e9894397faf8f29994304, type: 3}
@@ -231,3 +234,80 @@ MonoBehaviour:
   bounceHeight: 0.1
   bounceDuration: 0.2
   bounceCount: 2
+--- !u!114 &8351521248403830018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851707211279618324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8ccf1626b3ee84c95007cdc12ecb9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealingItem
+  ID: 0
+  Name: 
+  healAmount: 10
+--- !u!114 &4552122279277896976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851707211279618324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7903e28f655932e4aa755e0c1acbc848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBox
+  healAmount: 10
+  itemName: meat
+  itemIcon: {fileID: 0}
+  itemID: 2
+--- !u!61 &1048864569279028671
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851707211279618324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.084, y: 0.08}
+    newSize: {x: 0.11, y: 0.18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.084, y: 0.08}
+  m_EdgeRadius: 0
