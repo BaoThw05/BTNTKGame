@@ -18,8 +18,7 @@ GameObject:
   - component: {fileID: 2563452981072795458}
   - component: {fileID: 1407141446294398491}
   - component: {fileID: 2127203231303345252}
-  - component: {fileID: 3212831951912293780}
-  - component: {fileID: 7472397904813066203}
+  - component: {fileID: 4943948848575883376}
   m_Layer: 5
   m_Name: key
   m_TagString: Item
@@ -110,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 0.3
   maxDropDistance: 0.5
+  worldCanvasTransform: {fileID: 0}
 --- !u!114 &1144652516839759887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,8 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 1
-  Name: health
+  ID: 8
+  Name: key
+  dropChance: 100
+  minQuantity: 1
+  maxQuantity: 1
 --- !u!58 &5546750764641261356
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1277896721
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 155
   m_MaskInteraction: 0
@@ -247,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   weaponPrefab: {fileID: 5466243495666436623}
---- !u!114 &3212831951912293780
+--- !u!114 &4943948848575883376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,20 +259,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5466243495666436623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618eea026f7cb38449c5f855f6de5cc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4008b6cd0cc29c84583318419fc99caf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  itemSprite: {fileID: 0}
---- !u!114 &7472397904813066203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5466243495666436623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a2e5c4650c842868f6f997a0a396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickupAudio
-  pickupSound: {fileID: 8300000, guid: f31a54026b0af704a9de715244161a60, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::KeyItem

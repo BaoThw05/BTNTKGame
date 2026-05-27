@@ -18,8 +18,6 @@ GameObject:
   - component: {fileID: 7597841160772305531}
   - component: {fileID: 1880182778942404025}
   - component: {fileID: 8437274305638269828}
-  - component: {fileID: 6964938530794277344}
-  - component: {fileID: 7995394479378461459}
   m_Layer: 5
   m_Name: banhmi
   m_TagString: Item
@@ -110,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 0.3
   maxDropDistance: 0.5
+  worldCanvasTransform: {fileID: 0}
 --- !u!114 &4552185093575938523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,8 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 5
-  Name: key
+  ID: 1
+  Name: BanhMi
+  dropChance: 53
+  minQuantity: 1
+  maxQuantity: 1
 --- !u!58 &6305987973307857782
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -205,7 +207,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1277896721
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 155
   m_MaskInteraction: 0
@@ -247,29 +249,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   weaponPrefab: {fileID: 6681299899164940326}
---- !u!114 &6964938530794277344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6681299899164940326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618eea026f7cb38449c5f855f6de5cc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickupItem
-  itemSprite: {fileID: 0}
---- !u!114 &7995394479378461459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6681299899164940326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a2e5c4650c842868f6f997a0a396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickupAudio
-  pickupSound: {fileID: 8300000, guid: f31a54026b0af704a9de715244161a60, type: 3}

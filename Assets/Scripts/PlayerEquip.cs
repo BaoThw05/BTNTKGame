@@ -4,21 +4,10 @@ public class PlayerEquip : MonoBehaviour
 {
     [Header("Cấu hình vị trí tay")]
     public Transform handPoint;
-
-    [Header("Vũ khí dùng để Test (Kéo từ Prefab vào)")]
-    public GameObject testWeapon;
-
     private GameObject currentWeapon;
     private Transform gripTransform; // Đây chính là chìa khóa giữ tâm cán kiếm
 
     private Vector2 lastMoveDirection = Vector2.right;
-
-    void Start()
-    {
-        // Tự động gắn vũ khí vào tay khi vào game
-        Equip(testWeapon);
-    }
-
     public void Equip(GameObject weaponPrefab)
     {
         if (weaponPrefab == null) return;
@@ -64,38 +53,36 @@ public class PlayerEquip : MonoBehaviour
 
     void FlipWeapon()
     {
-        // Nếu tìm thấy Grip thì ta lật Grip, nếu không thì lật tạm Weapon ngoài cùng
+        // Chưa có vũ khí thì không làm gì
+        if (currentWeapon == null) return;
+
+        // Nếu tìm thấy Grip thì lật Grip, nếu không thì lật Weapon ngoài cùng
         Transform objectToFlip = (gripTransform != null) ? gripTransform : currentWeapon.transform;
 
-        if (objectToFlip == null) return;
-
-        // Đảm bảo góc xoay luôn cố định bằng 0 để không bị xoay tròn lung tung
+        // Đảm bảo góc xoay luôn cố định
         objectToFlip.localRotation = Quaternion.identity;
 
-        // Lấy Scale hiện tại của Grip (hoặc Weapon) ra để xử lý
+        // Lấy Scale hiện tại
         Vector3 currentScale = objectToFlip.localScale;
 
-        // Lấy hướng lật của chính nhân vật (PlayerFemale) để bù trừ nếu có
+        // Scale của player
         float playerScaleX = transform.localScale.x;
 
-        if (lastMoveDirection.x > 0) // Nhân vật nhìn sang PHẢI
+        if (lastMoveDirection.x > 0)
         {
-            // Nếu nhân vật bị âm (lật trái), ta phải làm âm Scale kiếm để triệt tiêu nhau, giúp kiếm hướng sang PHẢI
             if (playerScaleX < 0)
                 currentScale.x = -Mathf.Abs(currentScale.x);
             else
                 currentScale.x = Mathf.Abs(currentScale.x);
         }
-        else if (lastMoveDirection.x < 0) // Nhân vật nhìn sang TRÁI
+        else if (lastMoveDirection.x < 0)
         {
-            // Ngược lại, đảm bảo đầu kiếm lật đối xứng sang TRÁI
             if (playerScaleX < 0)
                 currentScale.x = Mathf.Abs(currentScale.x);
             else
                 currentScale.x = -Mathf.Abs(currentScale.x);
         }
 
-        // Áp dụng Scale trực tiếp lên Grip (Tâm cán kiếm)
         objectToFlip.localScale = currentScale;
     }
     public void EquipWeapon(GameObject weaponPrefab)

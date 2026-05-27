@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 4089602188611719036}
   - component: {fileID: 1655860703395897065}
   - component: {fileID: 7997389656773864009}
-  - component: {fileID: 1602642137024018736}
   - component: {fileID: 4786894426973977848}
   m_Layer: 5
   m_Name: "b\u1EAFp"
@@ -110,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 0.3
   maxDropDistance: 0.5
+  worldCanvasTransform: {fileID: 0}
 --- !u!114 &7614373944447772351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   ID: 2
-  Name: meat
+  Name: Bap
+  dropChance: 47
+  minQuantity: 1
+  maxQuantity: 1
 --- !u!58 &1858408686064022380
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1277896721
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 155
   m_MaskInteraction: 0
@@ -247,19 +250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   weaponPrefab: {fileID: 4525759534706147416}
---- !u!114 &1602642137024018736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4525759534706147416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a2e5c4650c842868f6f997a0a396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickupAudio
-  pickupSound: {fileID: 8300000, guid: f31a54026b0af704a9de715244161a60, type: 3}
 --- !u!114 &4786894426973977848
 MonoBehaviour:
   m_ObjectHideFlags: 0

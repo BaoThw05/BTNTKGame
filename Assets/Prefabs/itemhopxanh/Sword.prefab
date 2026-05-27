@@ -53,7 +53,6 @@ GameObject:
   - component: {fileID: 3848423460068754530}
   - component: {fileID: 3022514965948807982}
   - component: {fileID: 1077531308547387948}
-  - component: {fileID: 1771092915832688872}
   - component: {fileID: 4573607631846647673}
   - component: {fileID: 1423452777981188367}
   m_Layer: 5
@@ -80,8 +79,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.43800002, y: 0.55915904}
   m_AnchorMax: {x: 0.43800002, y: 0.55915904}
-  m_AnchoredPosition: {x: 54.053, y: 1.7525997}
-  m_SizeDelta: {x: 133.4979, y: 56.5287}
+  m_AnchoredPosition: {x: 36.982628, y: 1.7525997}
+  m_SizeDelta: {x: 167.6386, y: 56.5287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6914244475806607621
 CanvasRenderer:
@@ -147,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 0.3
   maxDropDistance: 0.5
+  worldCanvasTransform: {fileID: 0}
 --- !u!114 &1657229515972565835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,8 +159,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 2
+  ID: 11
   Name: sword
+  dropChance: 47
+  minQuantity: 1
+  maxQuantity: 1
 --- !u!58 &3848423460068754530
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -242,7 +245,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1277896721
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 155
   m_MaskInteraction: 0
@@ -271,19 +274,6 @@ MonoBehaviour:
   bounceHeight: 0.1
   bounceDuration: 0.2
   bounceCount: 2
---- !u!114 &1771092915832688872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2501854000651412311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a2e5c4650c842868f6f997a0a396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickupAudio
-  pickupSound: {fileID: 8300000, guid: f31a54026b0af704a9de715244161a60, type: 3}
 --- !u!114 &4573607631846647673
 MonoBehaviour:
   m_ObjectHideFlags: 0

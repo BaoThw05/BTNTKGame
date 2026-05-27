@@ -144,7 +144,6 @@ GameObject:
   - component: {fileID: 3835188599859315230}
   - component: {fileID: 3753846514982736906}
   - component: {fileID: 4447615808588927064}
-  - component: {fileID: 434612348479232879}
   - component: {fileID: 2525995662734065541}
   - component: {fileID: 4887416625748667824}
   m_Layer: 5
@@ -171,8 +170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8902802, y: -2.8028}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -43.667427, y: -2.8028}
+  m_SizeDelta: {x: 197.1154, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2835749980310440063
 CanvasRenderer:
@@ -238,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 0.3
   maxDropDistance: 0.5
+  worldCanvasTransform: {fileID: 0}
 --- !u!114 &2505546483474934148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 2
-  Name: sword
+  ID: 13
+  Name: sung2
+  dropChance: 25
+  minQuantity: 1
+  maxQuantity: 1
 --- !u!58 &3835188599859315230
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -333,7 +336,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1277896721
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 155
   m_MaskInteraction: 0
@@ -362,19 +365,6 @@ MonoBehaviour:
   bounceHeight: 0.1
   bounceDuration: 0.2
   bounceCount: 2
---- !u!114 &434612348479232879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8239272423899769722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8334a2e5c4650c842868f6f997a0a396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemPickupAudio
-  pickupSound: {fileID: 8300000, guid: f31a54026b0af704a9de715244161a60, type: 3}
 --- !u!114 &2525995662734065541
 MonoBehaviour:
   m_ObjectHideFlags: 0

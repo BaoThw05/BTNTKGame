@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 5554371880483053748}
   - component: {fileID: 5681408928166260257}
   - component: {fileID: 8351521248403830018}
-  - component: {fileID: 4552122279277896976}
   - component: {fileID: 1048864569279028671}
   m_Layer: 5
   m_Name: meatBthw
@@ -110,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   minDropDistance: 0.3
   maxDropDistance: 0.5
+  worldCanvasTransform: {fileID: 0}
 --- !u!114 &989913330512927990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   ID: 2
-  Name: 
+  Name: meat
+  dropChance: 49
+  minQuantity: 1
+  maxQuantity: 1
 --- !u!58 &7375577227309883457
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1277896721
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
   m_MaskInteraction: 0
@@ -248,23 +251,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealingItem
   ID: 0
   Name: 
+  dropChance: 0
+  minQuantity: 1
+  maxQuantity: 1
   healAmount: 10
---- !u!114 &4552122279277896976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4851707211279618324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7903e28f655932e4aa755e0c1acbc848, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthBox
-  healAmount: 10
-  itemName: meat
-  itemIcon: {fileID: 0}
-  itemID: 2
 --- !u!61 &1048864569279028671
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -303,7 +293,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.084, y: 0.08}
+    oldSize: {x: 0.06, y: 0.057142857}
     newSize: {x: 0.11, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
