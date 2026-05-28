@@ -5052,7 +5052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1082392de494d4fba8e90ee46dc60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniMapCameraFollow
-  player: {fileID: 4269831871989082668, guid: f303696f2e39e1d41901fe3c3a154381, type: 3}
+  player: {fileID: 0}
 --- !u!114 &259092552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9171,7 +9171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1082392de494d4fba8e90ee46dc60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniMapCameraFollow
-  player: {fileID: 4269831871989082668, guid: f303696f2e39e1d41901fe3c3a154381, type: 3}
+  player: {fileID: 0}
 --- !u!114 &360520572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10103,8 +10103,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 0.999502
+    width: 1.0004406
+    height: 0.99951077
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

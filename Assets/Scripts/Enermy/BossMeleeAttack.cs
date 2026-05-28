@@ -32,12 +32,27 @@ public class BossMeleeAttack : MonoBehaviour
     //------------------------------------------------
     private void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            target = playerObj.transform;
+        }
     }
+
     private void Update()
     {
         if (target == null)
-            return;
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                target = playerObj.transform;
+            }
+            else
+            {
+                return;
+            }
+        }
 
         PlayerHealth playerHealth =
             target.GetComponent<PlayerHealth>();
