@@ -121,11 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 15
+  ID: 13
   Name: vang
-  dropChance: 55
-  minQuantity: 1
-  maxQuantity: 1
 --- !u!58 &3972603121607256530
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -248,4 +245,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 4175155579396327209}
+  itemPrefab: {fileID: 4175155579396327209}

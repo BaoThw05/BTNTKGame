@@ -3,7 +3,8 @@ using UnityEngine.EventSystems;
 
 public class InventoryItem : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject weaponPrefab;
+    public GameObject itemPrefab;
+
     private WeaponHolderController weaponHolder;
 
     void Start()
@@ -17,12 +18,32 @@ public class InventoryItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Right)
+        if (eventData.button == PointerEventData.InputButton.Left)
         {
-            if (weaponHolder != null && weaponPrefab != null)
+            // Click trái: tăng HP
+
+            //if (playerHealth != null)
+            //{
+            //    playerHealth.Heal(healAmount);
+            //    Debug.Log($"Click trái để hồi máu +{healAmount}");
+
+            //}
+
+            HealingItem healingItem = itemPrefab.GetComponent<HealingItem>();
+            if (healingItem != null)
             {
-                weaponHolder.EquipWeapon(weaponPrefab);
-                Debug.Log($"Click phải để trang bị {weaponPrefab.name}");
+                healingItem.UseItem();
+                Debug.Log($"❤️ Đã sử dụng {itemPrefab.name}");
+                return;
+            }
+        }
+        else if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            // Click phải: trang bị item trên tay
+            if (weaponHolder != null && itemPrefab != null)
+            {
+                weaponHolder.EquipWeapon(itemPrefab);
+                Debug.Log($"Click phải để trang bị {itemPrefab.name}");
             }
         }
     }

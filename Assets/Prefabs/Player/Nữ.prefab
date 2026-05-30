@@ -80,9 +80,7 @@ MonoBehaviour:
   defaultWeaponPrefab: {fileID: 0}
   playerEquip: {fileID: 0}
   weaponSR: {fileID: 0}
-  attackPoint: {fileID: 0}
   handPoint: {fileID: 5821288447413440032}
-  currentWeapon: {fileID: 0}
   currentWeaponBase: {fileID: 0}
   weaponPosUp: {fileID: 3564846573135705962}
   weaponPosDown: {fileID: 147346262062965609}
@@ -237,6 +235,7 @@ GameObject:
   - component: {fileID: 270546364485503010}
   - component: {fileID: -3021732835172355407}
   - component: {fileID: 596338499339620526}
+  - component: {fileID: 437711034305778096}
   m_Layer: 0
   m_Name: "N\u1EEF"
   m_TagString: Player
@@ -430,6 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   moveAnimator: {fileID: 3514973191929869338}
   moveSpeed: 1
+  stepDelay: 0.4
 --- !u!114 &7928802693448645670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   hasKey: 0
-  holdingKey: 1
+  holdingKey: 0
 --- !u!114 &596338499339620526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +528,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   weaponHolder: {fileID: 3734356317197017522}
   playerMove: {fileID: 1062137612649470422}
+--- !u!61 &437711034305778096
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145979858692353942}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.014782935, y: 0.02706331}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.42}
+    newSize: {x: 1.6875, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.19246024, y: 0.31174678}
+  m_EdgeRadius: 0
 --- !u!1 &9207363546466178350
 GameObject:
   m_ObjectHideFlags: 0

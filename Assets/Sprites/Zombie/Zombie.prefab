@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 5135045896051848800}
   - component: {fileID: 1299790631990951429}
   - component: {fileID: 3503864967394121972}
+  - component: {fileID: 8102712581043360312}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -204,6 +205,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimationEventRelay
   enemyAttack: {fileID: 8690512686134777983}
+--- !u!61 &8102712581043360312
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004002761026267015}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.058870673, y: -0.5184392}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1.5, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.31879485, y: 0.26562166}
+  m_EdgeRadius: 0
 --- !u!1 &3127163744668960161
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   seeker: {fileID: 3347186803340687867}
   characterSR: {fileID: 6083699309730992671}
+  rb: {fileID: 0}
   target: {fileID: 0}
   animator: {fileID: 5135045896051848800}
   shoot:
@@ -455,6 +503,7 @@ MonoBehaviour:
     moveSpeed: 0.5
     nextWPDistance: 0.1
     stopDistance: 0.13
+  detectRange: 3
 --- !u!114 &587055239683427531
 MonoBehaviour:
   m_ObjectHideFlags: 0

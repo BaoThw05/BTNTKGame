@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: -4876412246161491831}
   - component: {fileID: -3639095166759713555}
   - component: {fileID: 2798210184508960949}
+  - component: {fileID: 3069809305594155164}
   m_Layer: 0
   m_Name: Nam
   m_TagString: Player
@@ -373,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   moveAnimator: {fileID: 6388502385771709666}
   moveSpeed: 1
+  stepDelay: 0.4
 --- !u!114 &1075065402936421602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,6 +473,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   weaponHolder: {fileID: 1205929848285400814}
   playerMove: {fileID: 3794669611391643920}
+--- !u!61 &3069809305594155164
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370587698008861017}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.00048846006, y: 0.038814828}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.27, y: 0.4}
+    newSize: {x: 1.6875, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.17133027, y: 0.29848427}
+  m_EdgeRadius: 0
 --- !u!1 &7885673822003414884
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,9 +599,7 @@ MonoBehaviour:
   defaultWeaponPrefab: {fileID: 0}
   playerEquip: {fileID: -4876412246161491831}
   weaponSR: {fileID: 0}
-  attackPoint: {fileID: 0}
   handPoint: {fileID: 240651501765844387}
-  currentWeapon: {fileID: 0}
   currentWeaponBase: {fileID: 0}
   weaponPosUp: {fileID: 6856463287672750292}
   weaponPosDown: {fileID: 9143830047390772371}

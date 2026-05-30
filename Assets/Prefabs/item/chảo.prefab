@@ -35,7 +35,7 @@ RectTransform:
   m_GameObject: {fileID: 3406313639871612671}
   m_LocalRotation: {x: 0.05906389, y: 0.020664198, z: 0.9370326, w: 0.34359056}
   m_LocalPosition: {x: 0, y: 0, z: 0.9059}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1315392423457781205}
@@ -44,7 +44,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 8.6426, y: -24.0681}
-  m_SizeDelta: {x: 119.412, y: 79.1173}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2732757540242257085
 CanvasRenderer:
@@ -88,16 +88,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3406313639871612671}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 3
+  ID: 4
   Name: Chao
-  dropChance: 75
-  minQuantity: 1
-  maxQuantity: 1
 --- !u!58 &7509004445078387961
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -220,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 3406313639871612671}
+  itemPrefab: {fileID: 3406313639871612671}
 --- !u!114 &-5669614826557493138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

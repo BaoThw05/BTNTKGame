@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     public Seeker seeker;
     public SpriteRenderer characterSR;
+    public Rigidbody2D rb;
     public Transform target;
     Path path;
     public Animator animator;
@@ -33,10 +34,17 @@ public class EnemyAI : MonoBehaviour
     }
 
     public WalkSettings walk;
+    [Header("Detection")]
+    public float detectRange = 10f;
 
     private void Start()
     {
         FindPlayerTarget();
+
+        if (rb == null)
+            rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+            Debug.LogWarning("EnemyAI: Rigidbody2D missing — movement may pass through colliders. Add a Rigidbody2D to this enemy and set Body Type to Dynamic.");
 
         // Chỉ lặp lại tính toán đường đi nếu có khả năng đi bộ
         if (walk.isWalkable)
@@ -45,7 +53,16 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        // SỬA LỖI: Nếu chưa có target, liên tục quét tìm Player ngoài Map
+        if (target != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, target.position);
+            if (distanceToPlayer > detectRange)
+            {
+                ClearTarget();
+                return;
+            }
+        }
+
         if (target == null)
         {
             FindPlayerTarget();
@@ -71,14 +88,32 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // Hàm bổ trợ tự động tìm kiếm Player an toàn
+    // Hàm bổ trợ tự động tìm kiếm Player an toàn trong phạm vi detectRange
     void FindPlayerTarget()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+        if (playerObj == null)
+            return;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, playerObj.transform.position);
+        if (distanceToPlayer <= detectRange)
         {
             target = playerObj.transform;
         }
+    }
+
+    private void ClearTarget()
+    {
+        target = null;
+
+        if (moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+            moveCoroutine = null;
+        }
+
+        if (animator != null)
+            animator.SetFloat("speed", 0f);
     }
 
     void EnemyFireBullet()
@@ -150,7 +185,14 @@ public class EnemyAI : MonoBehaviour
             Vector2 dir = direction.normalized;
 
             Vector2 velocity = dir * walk.moveSpeed * Time.deltaTime;
-            transform.position += (Vector3)velocity;
+            if (rb != null)
+            {
+                rb.MovePosition(rb.position + velocity);
+            }
+            else
+            {
+                transform.position += (Vector3)velocity;
+            }
 
             if (velocity.magnitude > 0.001f)
             {

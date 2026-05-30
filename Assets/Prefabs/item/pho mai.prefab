@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4002405654633305570}
   - component: {fileID: 3516151373160274170}
   - component: {fileID: 714502750404508013}
-  - component: {fileID: 6251477220906992589}
+  - component: {fileID: 7959461740167451351}
   m_Layer: 5
   m_Name: pho mai
   m_TagString: Item
@@ -117,16 +117,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3450958132346458842}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 10
+  ID: 9
   Name: Phomai
-  dropChance: 29
-  minQuantity: 1
-  maxQuantity: 1
 --- !u!58 &1802079256649208177
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -249,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 3450958132346458842}
---- !u!114 &6251477220906992589
+  itemPrefab: {fileID: 3450958132346458842}
+--- !u!114 &7959461740167451351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,7 +256,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3450958132346458842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8ccf1626b3ee84c95007cdc12ecb9a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::HealingItem
+  ID: 0
+  Name: 
+  healAmount: 5

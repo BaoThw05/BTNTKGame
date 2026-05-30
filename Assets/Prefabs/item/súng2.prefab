@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3519760041015379369}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000087327186, y: 0.03957262, z: 0.0022050245, w: 0.9992143}
-  m_LocalPosition: {x: 0.059000015, y: 0.009000003, z: -1}
+  m_LocalPosition: {x: 0.0866, y: 0.0106, z: -1.0022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +75,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 85.41601, y: -48.1565}
-  m_SizeDelta: {x: 455.2823, y: 190.7073}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2835749980310440063
 CanvasRenderer:
@@ -149,16 +149,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8239272423899769722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 13
+  ID: 12
   Name: sung2
-  dropChance: 25
-  minQuantity: 1
-  maxQuantity: 1
 --- !u!58 &3835188599859315230
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 8239272423899769722}
+  itemPrefab: {fileID: 8239272423899769722}
 --- !u!114 &3729976831710969215
 MonoBehaviour:
   m_ObjectHideFlags: 0

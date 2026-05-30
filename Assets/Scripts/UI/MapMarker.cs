@@ -21,6 +21,23 @@ public class MapMarker : MonoBehaviour
     private Transform currentPlayer;
     private Rigidbody2D playerRb;
 
+    void Start()
+    {
+        // Nếu chưa được gán từ inspector hoặc từ code khác thì tự tìm Player theo Tag
+        if (currentPlayer == null)
+        {
+            GameObject p = GameObject.FindWithTag("Player");
+            if (p != null)
+            {
+                currentPlayer = p.transform;
+                playerRb = p.GetComponent<Rigidbody2D>();
+            }
+        }
+
+        Canvas.ForceUpdateCanvases();
+        UpdateBigMapMarker();
+    }
+
     void Awake()
     {
         Instance = this;
@@ -45,16 +62,20 @@ public class MapMarker : MonoBehaviour
 
     void UpdateBigMapMarker()
     {
+        if (currentPlayer == null) return;
+
+        Vector2 playerPos = playerRb != null ? playerRb.position : (Vector2)currentPlayer.position;
+
         float percentX = Mathf.InverseLerp(
             worldBottomLeft.position.x,
             worldTopRight.position.x,
-            playerRb.position.x
+            playerPos.x
         );
 
         float percentY = Mathf.InverseLerp(
             worldBottomLeft.position.y,
             worldTopRight.position.y,
-            playerRb.position.y
+            playerPos.y
         );
 
         float posX = (percentX - 0.5f) * bigMapSize.x;

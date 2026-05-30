@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 4608912985421233980}
   - component: {fileID: 3310734466194064438}
   - component: {fileID: 3887924827104192730}
-  - component: {fileID: 5008927506592704501}
   - component: {fileID: 7662957279456707130}
+  - component: {fileID: 2440962963564984862}
   m_Layer: 5
   m_Name: "\u0111\u1ED3 h\u1ED9p"
   m_TagString: Item
@@ -35,7 +35,7 @@ RectTransform:
   m_GameObject: {fileID: 9100201896787500194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1.2, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,9 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ID: 14
   Name: DoHop
-  dropChance: 64
-  minQuantity: 1
-  maxQuantity: 1
 --- !u!58 &4608912985421233980
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -237,19 +234,6 @@ MonoBehaviour:
   bounceHeight: 0.1
   bounceDuration: 0.2
   bounceCount: 2
---- !u!114 &5008927506592704501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9100201896787500194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 9100201896787500194}
 --- !u!114 &7662957279456707130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,4 +246,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 0}
+  itemPrefab: {fileID: 9100201896787500194}
+--- !u!114 &2440962963564984862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100201896787500194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8ccf1626b3ee84c95007cdc12ecb9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealingItem
+  ID: 0
+  Name: 
+  healAmount: 15

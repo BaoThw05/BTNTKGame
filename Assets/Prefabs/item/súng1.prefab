@@ -44,7 +44,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -6.2096, y: -2.8978}
-  m_SizeDelta: {x: 243.6997, y: 100}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1440180455746659907
 CanvasRenderer:
@@ -118,16 +118,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3545654836837445381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83b3a906a597aec4d8c4ae736ff30bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 12
+  ID: 11
   Name: sung1
-  dropChance: 38
-  minQuantity: 1
-  maxQuantity: 1
 --- !u!58 &4431073664691117539
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -250,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e82cc4adf9b3d42802dab22930eb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  weaponPrefab: {fileID: 3545654836837445381}
+  itemPrefab: {fileID: 3545654836837445381}
 --- !u!114 &5719739164057417144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +298,7 @@ Transform:
   m_GameObject: {fileID: 6229075011997753301}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000087327186, y: 0.03957262, z: 0.0022050245, w: 0.9992143}
-  m_LocalPosition: {x: 79.3, y: 22.5, z: -7.9}
+  m_LocalPosition: {x: 47.5, y: 20.7, z: -5.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
